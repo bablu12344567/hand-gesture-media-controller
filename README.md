@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This project is a real-time hand gesture recognition system built using **Python, OpenCV, and MediaPipe**.  
+This project is a real-time hand gesture recognition system built using Python, OpenCV, and MediaPipe.  
 It uses a webcam to detect hand landmarks and maps specific finger gestures to media control actions such as play/pause, volume control, skipping, and brightness adjustment.
 
 The goal of this project was to explore computer vision and human-computer interaction by building a practical, real-time gesture-controlled media system.
@@ -24,9 +24,9 @@ The goal of this project was to explore computer vision and human-computer inter
 ## 🧠 How It Works
 
 1. Webcam captures live video using OpenCV.
-2. MediaPipe detects hand landmarks.
-3. The system calculates finger positions using landmark coordinates.
-4. Based on the number of fingers detected, specific keyboard actions are triggered using `pyautogui`.
+2. MediaPipe detects 21 hand landmarks.
+3. Finger positions are determined by comparing landmark coordinates.
+4. Based on detected gesture, corresponding keyboard actions are triggered using `pyautogui`.
 5. Brightness control is handled using `screen_brightness_control` (Windows only).
 
 ---
@@ -52,18 +52,18 @@ The goal of this project was to explore computer vision and human-computer inter
 - MediaPipe
 - PyAutoGUI
 - Screen Brightness Control (Windows)
-- Webcam (for real-time capture)
+- Webcam
 
 ---
 
-## 📂 Installation & Setup
+## 📦 Installation
 
 ### 1️⃣ Install Python (Recommended: Python 3.10 or 3.11)
 
-### 2️⃣ Install Required Packages
+### 2️⃣ Install Dependencies
 
-```bash
-pip install opencv-python mediapipe pyautogui screen-brightness-control
+```
+pip install -r requirements.txt
 ```
 
 ---
@@ -72,14 +72,14 @@ pip install opencv-python mediapipe pyautogui screen-brightness-control
 
 Navigate to project folder:
 
-```bash
-cd "C:\Users\reddy\Desktop\hand gesture"
+```
+cd hand-gesture-media-controller
 ```
 
 Run the script:
 
-```bash
-python "hand gesture media player controller.py"
+```
+python gesture_controller.py
 ```
 
 Press **ESC** to exit the application.
@@ -97,14 +97,6 @@ Press **ESC** to exit the application.
 
 ---
 
-## 📷 Example Workflow
-
-1. Show hand to webcam.
-2. System detects number of raised fingers.
-3. Corresponding media action is triggered instantly.
-
----
-
 ## 🔮 Future Improvements
 
 - Add gesture smoothing for better accuracy
@@ -112,18 +104,16 @@ Press **ESC** to exit the application.
 - Add GUI for gesture configuration
 - Multi-hand support
 - Cross-platform brightness control
-- Add machine learning-based gesture classification
+- ML-based gesture classification
 
 ---
 
 ## 🎯 Learning Outcome
 
-Through this project, I gained hands-on experience with:
+This project provided hands-on experience in:
 
 - Real-time computer vision systems
-- MediaPipe hand tracking model
+- MediaPipe hand tracking
 - Gesture recognition logic
 - System automation using Python
-- Handling real-time user input with controlled event triggering
-
-This project helped bridge the gap between theoretical computer vision concepts and practical implementation.
+- Handling real-time user input safely
